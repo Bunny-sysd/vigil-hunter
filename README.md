@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/logo.png" alt="Vigil Logo" width="220" />
+</p>
+
 # Vigil
 
 **AI-Powered Threat Hunting & Offensive Security Engine**  
