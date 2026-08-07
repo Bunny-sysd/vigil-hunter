@@ -1,0 +1,44 @@
+# Virtual Environment
+.venv/
+venv/
+env/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Environment & Secrets
+.env
+*.key
+*.pem
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Vigil output & sessions
+vigil-report.*
+*.report.html
+*.report.json
+.vigil/
+
+# Test artifacts
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Agents
+.agents/

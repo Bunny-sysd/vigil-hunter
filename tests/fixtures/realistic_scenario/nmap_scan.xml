@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<nmaprun scanner="nmap" args="nmap -sV -p 22,80,443 -oX nmap_scan.xml target.local" start="1784500000" version="7.94">
+  <host starttime="1784500000" endtime="1784500010">
+    <status state="up" reason="echo-reply"/>
+    <address addr="10.10.11.200" addrtype="ipv4"/>
+    <ports>
+      <port protocol="tcp" portid="22">
+        <state state="open" reason="syn-ack"/>
+        <service name="ssh" product="OpenSSH" version="8.2p1 Ubuntu 4ubuntu0.5" method="probed"/>
+      </port>
+      <port protocol="tcp" portid="80">
+        <state state="open" reason="syn-ack"/>
+        <service name="http" product="Apache httpd" version="2.4.49" method="probed"/>
+      </port>
+    </ports>
+  </host>
+</nmaprun>

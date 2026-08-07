@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Internal Staging Server - Debug Portal</title>
+    <!-- TODO: Disable internal debug endpoint /api/v2/debug/database before production deployment -->
+    <!-- Backup admin credentials: developer:StagingSecret2026! -->
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+</head>
+<body>
+    <h1>Staging Portal</h1>
+    <form action="/api/v1/auth" method="POST">
+        <input type="hidden" name="debug_mode" value="true">
+        <input type="hidden" name="internal_flag" value="HTB{c3l1_u_m4st3r_r3c0n}">
+        <input type="text" name="username" placeholder="Username">
+        <input type="password" name="password" placeholder="Password">
+        <button type="submit">Login</button>
+    </form>
+</body>
+</html>

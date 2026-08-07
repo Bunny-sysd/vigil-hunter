@@ -1,0 +1,7 @@
+Jul 18 03:00:01 target sshd[1001]: Invalid user admin from 10.10.14.5 port 42156 ssh2
+Jul 18 03:00:05 target sshd[1002]: Failed password for invalid user admin from 10.10.14.5 port 42156 ssh2
+Jul 18 03:00:10 target sshd[1003]: Failed password for invalid user admin from 10.10.14.5 port 42156 ssh2
+Jul 18 03:00:15 target sshd[1004]: Failed password for invalid user admin from 10.10.14.5 port 42156 ssh2
+Jul 18 03:00:20 target sshd[1005]: Failed password for invalid user admin from 10.10.14.5 port 42156 ssh2
+Jul 18 03:00:25 target sshd[1006]: Accepted password for admin from 10.10.14.5 port 42156 ssh2
+Jul 18 03:00:30 target sudo: admin : TTY=pts/0 ; PWD=/home/admin ; USER=root ; COMMAND=/bin/bash

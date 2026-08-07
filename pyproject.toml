@@ -1,0 +1,48 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "vigil-hunter"
+version = "0.4.0"
+description = "AI-Powered Threat Hunting & Offensive Security Engine"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.11"
+authors = [
+    {name = "Bunny-sysd"},
+]
+keywords = ["security", "threat-hunting", "forensics", "mitre-attack", "log-analysis"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Information Technology",
+    "Topic :: Security",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+]
+
+dependencies = [
+    "click>=8.0",
+    "rich>=13.0",
+    "requests>=2.31",
+    "python-dateutil>=2.8",
+    "google-genai>=1.0",
+]
+
+[project.optional-dependencies]
+gemini = ["google-genai>=1.0"]
+openai = ["openai>=1.0"]
+all = ["google-genai>=1.0", "openai>=1.0"]
+dev = ["pytest>=8.0", "pytest-cov", "pytest-asyncio"]
+
+[project.scripts]
+vigil = "vigil.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["vigil*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]

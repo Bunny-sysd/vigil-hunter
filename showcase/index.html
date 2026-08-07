@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIGIL UI — 300+ PRO Animated Component Library</title>
+    <meta name="description" content="Next-generation frontend library of animated UI components for high-end web applications.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="bg-gradient-glow"></div>
+    <canvas id="bg-canvas"></canvas>
+
+    <!-- Header Navigation -->
+    <header class="header">
+        <div class="container header__container">
+            <a href="#" class="logo">
+                <div class="logo__icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                        <polyline points="2 17 12 22 22 17"></polyline>
+                        <polyline points="2 12 12 17 22 12"></polyline>
+                    </svg>
+                </div>
+                <span class="logo__text">VIGIL <span class="badge-pro">LIB PRO</span></span>
+            </a>
+
+            <nav class="nav">
+                <a href="#components" class="nav__link active">Components</a>
+                <a href="#features" class="nav__link">Features</a>
+                <a href="#showcase" class="nav__link">Live Playground</a>
+                <a href="#pricing" class="nav__link">Pricing</a>
+            </nav>
+
+            <div class="header__actions">
+                <button class="btn btn--secondary btn--sm" id="btn-theme-toggle">
+                    <span class="btn__icon">✨</span> Mode
+                </button>
+                <button class="btn btn--primary btn--shine" onclick="openProModal()">
+                    <span>Unlock 300+ PRO</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero__container">
+            <div class="hero__badge">
+                <span class="dot-pulse"></span> 300+ PRO-Level Web Components Ready to Ship
+            </div>
+            
+            <h1 class="hero__title">
+                BUILD STUNNING <br>
+                <span class="text-gradient">WEB EXPERIENCES</span> FAST
+            </h1>
+            
+            <p class="hero__subtitle">
+                The world's most impressive frontend components rebuilt with clean vanilla CSS, GSAP, and Canvas shaders — copy, paste, and ship your next masterpiece.
+            </p>
+
+            <div class="hero__buttons">
+                <a href="#components" class="btn btn--primary btn--lg btn--shine">
+                    <span>Explore Components</span>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+                <button class="btn btn--glass btn--lg" onclick="triggerInteractiveDemo()">
+                    <span>Live Interactive Demo</span>
+                </button>
+            </div>
+
+            <!-- Stats Bar -->
+            <div class="hero__stats">
+                <div class="stat-item">
+                    <span class="stat-num" data-count="320">320+</span>
+                    <span class="stat-label">UI Components</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-num">60 FPS</span>
+                    <span class="stat-label">GPU Accelerated</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-num">0 KB</span>
+                    <span class="stat-label">Dependency Overhead</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-num">100%</span>
+                    <span class="stat-label">Clean Code</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Components Showcase Section -->
+    <section class="components" id="components">
+        <div class="container">
+            <div class="section-header">
+                <div>
+                    <h2 class="section-title">PRO Component Library</h2>
+                    <p class="section-desc">Select a category to inspect interactive live demos and code snippets</p>
+                </div>
+
+                <div class="search-bar">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+                    <input type="text" id="component-search" placeholder="Search components (e.g. Mouse, Glass, 3D, Text)...">
+                </div>
+            </div>
+
+            <div class="components__layout">
+                <!-- Sidebar Category Filter -->
+                <aside class="sidebar">
+                    <div class="sidebar__sticky">
+                        <h4 class="sidebar__title">CATEGORIES</h4>
+                        <ul class="category-list">
+                            <li><button class="cat-btn active" data-cat="all"><span class="cat-icon">⚡</span> All Components <span class="cat-count">12</span></button></li>
+                            <li><button class="cat-btn" data-cat="mouse"><span class="cat-icon">🖱️</span> Mouse & Cursor <span class="cat-count">3</span></button></li>
+                            <li><button class="cat-btn" data-cat="text"><span class="cat-icon">✍️</span> Typography & Text <span class="cat-count">2</span></button></li>
+                            <li><button class="cat-btn" data-cat="3d"><span class="cat-icon">🧊</span> 3D & Spatial <span class="cat-count">2</span></button></li>
+                            <li><button class="cat-btn" data-cat="shader"><span class="cat-icon">🌊</span> Shaders & Particles <span class="cat-count">2</span></button></li>
+                            <li><button class="cat-btn" data-cat="ui"><span class="cat-icon">💎</span> Glassmorphism UI <span class="cat-count">3</span></button></li>
+                        </ul>
+                    </div>
+                </aside>
+
+                <!-- Components Grid -->
+                <main class="grid-container" id="components-grid">
+                    <!-- Cards will be populated by JS -->
+                </main>
+            </div>
+        </div>
+    </section>
+
+    <!-- Live Interactive Playground Section -->
+    <section class="playground" id="showcase">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2 class="section-title">Live Interactive Playground</h2>
+                <p class="section-desc">Tweak animation parameters in real-time to feel the interactive fluidity</p>
+            </div>
+
+            <div class="playground__card">
+                <div class="playground__stage" id="demo-stage">
+                    <div class="interactive-object" id="interactive-card">
+                        <div class="card-glow"></div>
+                        <div class="card-content">
+                            <span class="card-badge">INTERACTIVE PRO</span>
+                            <h3>Quantum Neon Sphere</h3>
+                            <p>Move your mouse or drag sliders to alter WebGL physics & spatial lighting.</p>
+                            <div class="stage-particles" id="stage-particles"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="playground__controls">
+                    <h3>Control Panel</h3>
+                    
+                    <div class="control-group">
+                        <label>Glow Intensity <span id="val-glow">80%</span></label>
+                        <input type="range" id="slider-glow" min="0" max="100" value="80">
+                    </div>
+
+                    <div class="control-group">
+                        <label>3D Tilt Angle <span id="val-tilt">25deg</span></label>
+                        <input type="range" id="slider-tilt" min="0" max="50" value="25">
+                    </div>
+
+                    <div class="control-group">
+                        <label>Particle Velocity <span id="val-speed">1.5x</span></label>
+                        <input type="range" id="slider-speed" min="1" max="5" value="2" step="0.1">
+                    </div>
+
+                    <div class="control-group">
+                        <label>Color Spectrum</label>
+                        <div class="color-presets">
+                            <button class="color-chip active" data-color="cyan" style="background: #00f2fe;"></button>
+                            <button class="color-chip" data-color="purple" style="background: #9d4edd;"></button>
+                            <button class="color-chip" data-color="emerald" style="background: #10b981;"></button>
+                            <button class="color-chip" data-color="amber" style="background: #f59e0b;"></button>
+                        </div>
+                    </div>
+
+                    <button class="btn btn--primary w-full mt-4" onclick="copyCurrentPreset()">
+                        <span>Copy CSS & Shader Matrix</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Code Preview Modal -->
+    <div class="modal-overlay" id="code-modal">
+        <div class="modal">
+            <div class="modal__header">
+                <h3 class="modal__title" id="modal-component-title">Component Source Code</h3>
+                <button class="modal__close" onclick="closeCodeModal()">&times;</button>
+            </div>
+
+            <div class="modal__tabs">
+                <button class="tab-btn active" data-tab="html">HTML</button>
+                <button class="tab-btn" data-tab="css">CSS</button>
+                <button class="tab-btn" data-tab="js">JavaScript</button>
+            </div>
+
+            <div class="modal__body">
+                <pre class="code-block"><code id="code-display">// Source code loading...</code></pre>
+            </div>
+
+            <div class="modal__footer">
+                <span class="modal__info">Ready to copy & paste into your project</span>
+                <button class="btn btn--primary" id="btn-copy-code" onclick="copyCodeFromModal()">
+                    <span>Copy Code</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast">Code copied to clipboard!</div>
+
+    <script src="app.js"></script>
+</body>
+</html>
