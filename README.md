@@ -1,23 +1,17 @@
-<p align="center">
-  <h1 align="center">🔍 Vigil</h1>
-  <p align="center"><strong>AI-Powered Threat Hunting & Offensive Security Engine</strong></p>
-  <p align="center">
-    <em>Human Commander + AI Tactical Compass</em>
-  </p>
-</p>
+# Vigil
 
-<p align="center">
-  <a href="#installation"><img src="https://img.shields.io/badge/python-3.11+-blue?logo=python&logoColor=white" alt="Python 3.11+"></a>
-  <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-green" alt="MIT License"></a>
-  <a href="#features"><img src="https://img.shields.io/badge/version-0.4.0-cyan" alt="Version 0.4.0"></a>
-  <a href="#ai-providers"><img src="https://img.shields.io/badge/AI-Gemini%20%7C%20OpenAI%20%7C%20Ollama-purple" alt="AI Providers"></a>
-</p>
+**AI-Powered Threat Hunting & Offensive Security Engine**  
+*Human Commander + AI Tactical Compass Framework*
+
+[![Python 3.11+](https://img.shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Version](https://img.shields.io/badge/version-0.4.0-blue.svg)](pyproject.toml)
 
 ---
 
-Vigil is a **CLI-first security analysis tool** that parses scan outputs, log files, and source code to surface vulnerabilities, map MITRE ATT&CK techniques, discover live CVE exploits, and generate **ranked tactical next-step commands** for penetration testers.
+Vigil is a CLI-based security analysis framework that parses scan outputs, log files, and source code to surface vulnerabilities, map MITRE ATT&CK techniques, discover live CVE exploits, and generate ranked tactical next-step commands for security teams.
 
-**Vigil does NOT take over your terminal.** It acts as your tactical intelligence compass — the human makes every execution decision.
+Vigil adheres strictly to a **Human-in-the-Loop** model: it acts as a tactical intelligence compass while leaving executive decision-making and command execution in the hands of the operator.
 
 ---
 
@@ -38,7 +32,7 @@ Vigil is a **CLI-first security analysis tool** that parses scan outputs, log fi
 
 ## Features
 
-### 🎯 Multi-Format Log Ingestion
+### Multi-Format Log Ingestion
 Vigil auto-detects and parses **8 log formats** with a universal fallback:
 - **Nmap** (XML + plaintext scan output)
 - **Auth logs** (SSH brute force, login events)
@@ -49,27 +43,27 @@ Vigil auto-detects and parses **8 log formats** with a universal fallback:
 - **Crontab files** (Persistence mechanism detection)
 - **HTML source** (Web application vulnerability scanning)
 
-### 🧭 Red Team Compass Engine
+### Red Team Compass Engine
 The Compass Engine analyzes your scan results and generates:
 - **Kill chain phase assessment** (Reconnaissance → Initial Access → Privilege Escalation)
 - **Ranked tactical next steps** with concrete CLI command templates
 - **MITRE ATT&CK technique mapping** for every finding
 - **Pivot opportunities** and lateral movement suggestions
 
-### 🔗 Live CVE & Exploit Discovery
+### Live CVE & Exploit Discovery
 Three-tier vulnerability correlation — works online or fully offline:
 1. **Local DB** — Instant offline lookup against curated known vulnerabilities
 2. **OSV.dev + CVEDetails** — Multi-source live CVE search (no API key required for OSV)
 3. **NVD API v2.0** — NIST National Vulnerability Database with CPE matching
 4. **GitHub PoC Finder** — Discovers proof-of-concept exploit repos, verifies availability, and evaluates README quality to filter spam
 
-### 🤖 Multi-Provider AI with Auto-Fallback
+### Multi-Provider AI with Auto-Fallback
 - **Google Gemini** (primary)
 - **OpenAI GPT-4o** (alternative)
 - **Ollama** (fully local, no API key needed)
 - If one provider fails, Vigil automatically falls back to the next
 
-### 🛡️ Source Code Auditor (SAST)
+### Source Code Auditor (SAST)
 Built-in static analysis for 7 vulnerability classes:
 - SQL Injection (CWE-89)
 - Command Injection / RCE (CWE-78)
@@ -79,21 +73,21 @@ Built-in static analysis for 7 vulnerability classes:
 - Weak Cryptography (CWE-327)
 - AI-powered deep code analysis with secure refactoring suggestions
 
-### 📊 Five Output Formats
-- **CLI** — Rich terminal dashboard with color-coded severity badges
+### Five Output Formats
+- **CLI** — Terminal dashboard with color-coded severity indicators
 - **HTML** — Self-contained executive forensic dashboard with interactive tabs
-- **Markdown** — Clean report for documentation
+- **Markdown** — Structured report for documentation
 - **JSON** — Structured data for SIEM ingestion
 - **SARIF v2.1.0** — GitHub Code Scanning and IDE integration
 
-### 🔄 Diff Engine
+### Diff Engine
 Compare two scans to instantly see:
 - Newly opened ports and services
 - Closed/patched services
 - Version changes
 - New vulnerabilities vs. resolved ones
 
-### 🧠 Multi-Agent Orchestrator
+### Multi-Agent Orchestrator
 Phase-locked state machine with Blackboard Memory:
 - **Recon Agent** → **Initial Access Agent** → **PrivEsc Agent**
 - Inter-agent handoff notes with context preservation
